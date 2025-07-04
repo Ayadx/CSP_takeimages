@@ -45,11 +45,11 @@ from datetime import datetime
 import time
 import schedule
 
-# Directory to save images
+#Directory to save images
 output_dir = "/home/pi/microscope_images"
 os.makedirs(output_dir, exist_ok=True)
 
-# Set your USB camera ID (usually 0, 1 if multiple cameras)
+#Set your USB camera ID (usually 0, 1 if multiple cameras)
 CAMERA_INDEX = 0
 
 def capture_image():
@@ -75,7 +75,7 @@ def capture_image():
 
     cap.release()
 
-# Schedule to run every 10 minutes
+#Schedule to run every 10 minutes
 schedule.every(10).minutes.do(capture_image)
 
 print("📷 Microscope image capture started (every 10 minutes)...")
