@@ -1,3 +1,8 @@
+Great choice! Using Python gives you more flexibility, especially if you plan to add features later (like uploading, filtering, or image analysis).
+
+
+---
+
 ✅ Plan: Use Python to Capture Images from Your Celestron Microscope
 
 We’ll use:
@@ -6,6 +11,9 @@ OpenCV (to access the USB camera)
 
 schedule or time (to take snapshots every 10 minutes)
 
+
+
+---
 
 🧰 Step-by-Step Instructions
 
@@ -20,6 +28,8 @@ Also, if you'd like to use scheduling in a cleaner way:
 
 pip3 install schedule
 
+
+---
 
 🐍 2. Python Script to Capture Images
 
@@ -75,6 +85,9 @@ while True:
     schedule.run_pending()
     time.sleep(1)
 
+
+---
+
 🏃 3. Run It
 
 Make sure it's executable and run it:
@@ -86,6 +99,10 @@ This will:
 Capture an image immediately
 
 Keep running in the background capturing every 10 minutes
+
+
+
+---
 
 ⚙️ 4. (Optional) Run It on Boot
 
@@ -99,6 +116,9 @@ Add this line at the bottom:
 
 Make sure the script has correct permissions and absolute paths.
 
+
+---
+
 🔎 Verify Camera Index (if needed)
 
 If the camera index 0 doesn't work, try listing video devices:
@@ -109,6 +129,9 @@ Try video0, video1, etc. in this line of the script:
 
 cap = cv2.VideoCapture(CAMERA_INDEX)
 
+
+---
+
 🧪 Test Before Scheduling
 
 Run it manually to confirm:
@@ -116,6 +139,9 @@ Run it manually to confirm:
 python3 capture_microscope.py
 
 Check the images in /home/pi/microscope_images/.
+
+
+---
 
 Let me know if you want to:
 
@@ -126,3 +152,7 @@ Upload images to cloud
 Detect blur/focus automatically
 
 Create a web interface
+
+
+I can help you extend the script easily.
+
